@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Автокартель - Автосервис в Гатово</title>
+    <!-- Yandex Maps API -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ_api&lang=ru_RU" type="text/javascript"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Подключаем внешний CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Шапка (исправленная) -->
+   <header>
+    <div class="container">
+        <div class="logo">
+            <a href="index.html" class="logo-link"> <!-- Ссылка теперь ведет на главную -->
+                <img src="images/Logo.png" alt="Автокартель" class="logo-img">
+            </a>
+            <div class="logo-text">
+                <div class="logo-main">АВТОКАРТЕЛЬ</div>
+                <div class="logo-sub">ПРОФЕССИОНАЛЬНЫЙ СЕРВИС</div>
+            </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>       <!-- Ссылка на главную -->
+                <li><a href="services.html">Услуги и цены</a></li> <!-- Ссылка на услуги -->
+                <li><a href="reviews.html">Отзывы</a></li>      <!-- Ссылка на отзывы -->
+                <li><a href="About_us.html">О нас</a></li>         <!-- Ссылка на о нас -->
+                <li><a href="contact.html">Контакты</a></li>    <!-- Ссылка на контакты -->
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Главная -->
+    <section id="home">
+        <div class="hero">
+            <h1>Профессиональный автосервис в Гатово</h1>
+            <p>Качественный ремонт коммерческого и легкового транспорта</p>
+            <!--<a href="#appointment" class="btn">Записаться онлайн</a>-->
+
+        </div>
+        <div class="container">
+            <h2 class="section-title">Почему выбирают нас</h2>
+            <div class="services">
+                <div class="service-item">
+                    <i class="fas fa-tools"></i>
+                    <h3>Опытные мастера</h3>
+                    <p>Стаж более 10 лет</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-clock"></i>
+                    <h3>Быстрый ремонт</h3>
+                    <p>В день обращения</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Современное оборудование</h3>
+                    <p>Точная диагностика</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Гарантия на работы</h3>
+                    <p>До 1 года</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container"><div class="section-divider"></div></div>
+
+   
+
+    
+
+    <!-- Отзывы -->
+    <section id="reviews">
+    <div class="container">
+        <h2 class="section-title">Отзывы клиентов</h2>
+        <div class="reviews-grid">
+            <div class="review-item">
+                <img src="images\otziv\otziv1.jpg" alt="Фото отзыва" class="review-img">
+            </div>
+<div class="review-item">
+                <img src="images\otziv\otziv1.jpg" alt="Фото отзыва" class="review-img">
+            </div>
+
+        </div>
+    </div>
+</section>
+
+    <div class="container"><div class="section-divider"></div></div>
+
+    <!-- Контакты -->
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Контакты и запись</h2>
+            
+            <div id="map"></div>
+            
+            <div class="contact-info">
+                <p><i class="fas fa-map-marker-alt"></i> агрогородок Гатово, ул. Фрунзе, 8</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+375339131430">+375 33 913-14-30</a></p>
+                <p><i class="fas fa-envelope"></i> info@avtokartel.by</p>
+                <p><i class="fas fa-clock"></i> Пн-Пт: 9:00–20:00, Сб: 10:00–18:00, Вс: 11:00–17:00</p>
+                <p><i class="fas fa-star"></i> Без выходных</p>
+            </div>
+
+           <!-- <div class="appointment-form" id="appointment">
+                <h2>Записаться на ремонт</h2>
+                <form id="appointmentForm">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Ваше имя" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" placeholder="Ваш телефон" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Ваш Email" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="service">
+                            <option value="Диагностика">Компьютерная диагностика</option>
+                            <option value="Замена масла">Замена масла</option>
+                            <option value="Ремонт подвески">Ремонт подвески</option>
+                            <option value="Другое">Другое</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" placeholder="Комментарий (необязательно)" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Отправить заявку</button>
+                </form>
+                <div id="formMessage" style="margin-top: 20px; text-align: center;"></div>
+            </div>-->
+        </div>
+    </section>
+
+    <!-- Подвал -->
+     <footer>
+        <div class="container">
+            <img src="images/Logo.png" alt="Автокартель" class="footer-logo">
+            <p>&copy; 2025 Автокартель. Все права защищены.</p>
+            <p>аг. Гатово, ул. Фрунзе, 8 | Тел: +375 33 913-14-30 |  info@avtokartel.by</p>
+            <p style="margin-top: 20px;">Работаем для вас каждый день!</p>
+        </div>
+    </footer>
+
+    <!-- Подключаем внешний JS -->
+    <script src="js/script.js"></script>
+</body>
+</html>
