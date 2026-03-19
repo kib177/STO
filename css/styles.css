@@ -576,6 +576,43 @@ footer p {
     .contact-item i {
         font-size: 2rem;
     }
+ /* Уменьшаем высоту логотипа */
+    .logo-img {
+        height: 60px; /* вместо 85px */
+    }
+
+    /* Уменьшаем размер основного текста логотипа */
+    .logo-main {
+        font-size: 1.2rem;
+    }
+
+    .logo-sub {
+        font-size: 0.7rem;
+        letter-spacing: 1px;
+    }
+
+    /* Уменьшаем отступы в шапке */
+    header {
+        padding: 8px 0;
+    }
+
+    /* Меню: уменьшаем шрифт и отступы между пунктами */
+    nav ul {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    /* Телефон: делаем компактнее */
+    .header-phone a {
+        font-size: 0.9rem;
+    }
+
+    .header-phone i {
+        font-size: 1rem;
+    }
 }
 @media (max-width: 480px) {
     .header-phone a {
@@ -586,6 +623,29 @@ footer p {
     }
     .hero h1 {
         font-size: 1.8rem;
+    }
+.logo-img {
+        height: 50px;
+    }
+
+    .logo-main {
+        font-size: 1rem;
+    }
+
+    .logo-sub {
+        font-size: 0.6rem;
+    }
+
+    nav ul {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.8rem;
+    }
+
+    .header-phone a {
+        font-size: 0.8rem;
     }
 }
 @media (max-width: 600px) {
