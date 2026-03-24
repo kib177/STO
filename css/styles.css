@@ -126,7 +126,7 @@ nav a:hover {
     text-decoration: none;
     color: #2c3e50;
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     display: flex;
     align-items: center;
     gap: 8px;                  
@@ -227,10 +227,6 @@ nav a:hover {
     height: 100%;
 }
 
-.service-item:hover {
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-}
-
 .service-item i {
     font-size: 3.0rem;
     color: #2980b9;
@@ -301,16 +297,6 @@ nav a:hover {
     font-style: italic;
 }
 
-.review-item .author {
-    font-weight: 600;
-    color: #2c3e50;
-}
-
-.review-item .date {
-    color: #95a5a6;
-    font-size: 0.85rem;
-    margin-top: 5px;
-}
 
 /* О нас */
 .about-section {
@@ -511,7 +497,6 @@ nav a:hover {
     background: white;
 }
 
-/* Подвал */
 footer {
     background: #2c3e50;
     color: white;
@@ -527,100 +512,281 @@ footer p {
     margin: 5px 0;
 }
 
+/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
+
+/* Планшеты и маленькие ноутбуки (до 768px) */
 @media (max-width: 768px) {
-    header .container {
-        flex-direction: column;
-        gap: 15px;
+    .container {
+        padding: 0 20px;
     }
-    .hero p,
-    .hero ul,
-    .hero-content {
-        max-width: 80%;
-    }
-    .header-phone {
-        margin-left: 0;
-        margin-top: 10px;
-        width: 80%;
-        text-align: center;
-    }
-    
-    .header-phone a {
+
+    .logo {
         justify-content: center;
     }
-    
-    nav ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-    
-    .hero h1 {
-        font-size: 2.2rem;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
-    
-    .about-section {
-        padding: 25px;
-    }
-    
-    .appointment-form {
-        padding: 25px;
-    }
-    .contact-item {
-        padding: 20px 15px;
-    }
-    .contact-item i {
-        font-size: 2rem;
-    }
-}
-@media (max-width: 480px) {
-    .header-phone a {
-        font-size: 0.9rem;
-    }
-    .section-title {
-        font-size: 1.6rem;
-    }
-    .hero h1 {
-        font-size: 1.8rem;
-    }
+
     .logo-img {
-        height: 50px;
+        height: 70px;
     }
 
     .logo-main {
-        font-size: 1rem;
+        font-size: 1.4rem;
     }
 
     .logo-sub {
-        font-size: 0.6rem;
+        font-size: 0.7rem;
     }
 
     nav ul {
-        gap: 8px;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
     }
 
     nav a {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        padding-bottom: 2px;
+    }
+
+    .header-phone {
+        margin-left: 0;
     }
 
     .header-phone a {
-        font-size: 0.8rem;
+        font-size: 1rem;
+        justify-content: center;
     }
-}
-@media (max-width: 600px) {
-    .services, .reviews-grid {
-        grid-template-columns: 1fr;
+
+    .hero {
+        padding: 40px 15px;
     }
-    .services {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+    .hero h1 {
+        font-size: 2rem;
     }
-.contact-item {
+
+    .hero p {
+        font-size: 1rem;
+        text-align: left;
+        padding: 0 5px;
+    }
+
+    .btn {
+        padding: 10px 24px;
+        font-size: 0.9rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin: 30px 0 25px;
+    }
+
+    .section-divider {
+        margin: 30px 0;
+    }
+
+    .services,
+    .reviews-grid,
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+    }
+
+    .service-item {
         padding: 20px 15px;
     }
+
+    .service-img {
+        height: 140px;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .about-section,
+    .legal-section {
+        padding: 25px 20px;
+        margin: 30px 0;
+    }
+
+    .contact-item {
+        padding: 20px 15px;
+    }
+
     .contact-item i {
         font-size: 2rem;
     }
+
+    .appointment-form {
+        padding: 20px 15px;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .appointment-form h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 10px;
+    }
+
+    #map {
+        height: 240px;
+        margin: 0px;
+    }
+
+    footer {
+        padding: 15px 0;
+        margin: 0px;
+    }
+
+    footer p {
+        font-size: 0.85rem;
+    }
+
+    .footer-logo {
+        height: 70px;
+    }
+
+    .logo.hide-on-scroll {
+        display: none;
+    }
+   
+    header.shrink {
+        padding: 5px 0;
+        transition: padding 0.2s ease;
+    }
+
+    header.shrink .container {
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+ 
+    header .container {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+}
+
+/* Смартфоны (до 480px) */
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .hero h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+    .logo.hide-on-scroll {
+        display: none;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin: 5px 0 5px;
+    }
+
+    .section-title::after {
+        width: 60px;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .header-phone a {
+        font-size: 1.1rem;
+    }
+
+    .services {
+         grid-template-columns: 1fr 1fr;
+         margin: 20px 0 10px;
+         gap: 15px;
+         flex-direction: row;
+         width: 100%;
+    }
+
+    .service-item {
+         padding: 15px 10px;
+         flex-direction: column;
+         height: 100%;
+    }
+
+    .service-item i {
+        font-size: 1.5rem;
+    }
+
+    .service-item h3 {
+        font-size: 1rem;
+    }
+
+    .service-item p,
+    .review-item p {
+        font-size: 0.9rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+    }
+
+    .about-section,
+    .legal-section {
+        padding: 20px 15px;
+        font-size: 0.95rem;
+    }
+
+    .contact-item {
+        padding: 15px;
+    }
+
+    .contact-item h3 {
+        font-size: 1rem;
+    }
+
+    .contact-item p {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        padding: 8px 20px;
+        font-size: 0.85rem;
+    }
+
+    .footer-logo {
+        height: 60px;
+    }
+
+    .reviews-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 15px 0;
+        padding: 1px;
+    }
+
+    .review-item {
+        padding: 0px;
+        margin: 0px;
+    }
+    
+    .review-img {
+        padding: 0px;
+        margin: 0px ;
+    }
+
+
 }
